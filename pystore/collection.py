@@ -191,7 +191,7 @@ class Collection(object):
 
         # write data
         write = self.write_threaded if threaded else self.write
-        write(item, combined, npartitions=None, chunksize=None,
+        write(item, combined, npartitions=npartitions, chunksize=None,
               metadata=current.metadata, overwrite=True,
               epochdate=epochdate, reload_items=reload_items, **kwargs)
 
